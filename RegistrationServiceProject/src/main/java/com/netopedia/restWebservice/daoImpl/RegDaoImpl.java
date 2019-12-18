@@ -7,15 +7,11 @@ import com.netopedia.restWebservice.model.User;
 
 @Repository
 public class RegDaoImpl implements RegistrationDao {
-
+	User user = null;
 	@Override
 	public User getUserById(long id) {
 		if (id == 1) {
-			User user = new User();
-			user.setFirstName("Harpal");
-			user.setLastName("Adichwal");
-			user.setAge(5);
-			user.setAddress("Canada");
+			
 			return user;
 		} else if (id == 2) {
 			User user = new User();
@@ -28,5 +24,13 @@ public class RegDaoImpl implements RegistrationDao {
 			return null;
 		}
 	}
+
+	@Override
+	public String createUserById(User user) {
+		this.user = user;
+		return "User Registered";
+	}
+
+	
 
 }

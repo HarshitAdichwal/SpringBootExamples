@@ -11,4 +11,5 @@ import com.netopedia.restWebservice.model.User;
  */
 public interface RegistrationDao {
 	User getUserById(long id);
+	String createUserById(User user);
 }

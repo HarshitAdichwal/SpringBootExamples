@@ -18,4 +18,9 @@ public class RegServiceImpl implements RegService {
 		return registrationDao.getUserById(id);
 	}
 
+	@Override
+	public String createUserById(User user) {
+		return registrationDao.createUserById(user);
+	}
+
 }
